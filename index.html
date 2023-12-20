@@ -45,48 +45,146 @@
             border: 1px solid black;
             border-collapse: collapse;
             text-align: center;
-           
+
         }
+
         td {
             font-size: 10px
+        }
+
+        .layout_HDBank {
+            width: 580px;
+            margin: auto;
+            background: white;
+        }
+
+        .layout_HDBank>div {
+            width: 100%;
+        }
+
+        .logo_HDBank {
+            width: 40%;
+            float: left;
+        }
+
+        .detail_HDBank {
+            width: 60%;
+            float: right;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        table {
+            width: 100%;
+            background: #BEE0FC
+        }
+
+        table:last-child {
+            background: transparent;
+        }
+
+        .row-HDBank:nth-child(1) {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .row-HDBank:nth-child(2) {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .td-w-150 {
+            text-align: left;
+            width: 150px
+        }
+
+        .td-w-100 {
+            text-align: right;
+            width: 100px;
+        }
+
+        .text-left-12-weight-500 {
+            font-weight: 500;
+            font-size: 12px;
+            float: left;
+            text-align: left;
+            text-transform: none;
+
+        }
+
+        .text-center-12-weight-500 {
+            text-transform: uppercase;
+            font-size: 12px;
+            line-height: 0px;
+            text-align: center;
+        }
+
+        .text-right-12-weight-500 {
+            font-weight: 500;
+            font-size: 12px;
+            text-align: right;
+        }
+
+        .text-12 {
+            font-weight: 500;
+            font-size: 12px;
+            text-align: left;
+            text-transform: none;
+            text-align: center;
+        }
+
+        .w-250-HDBank {
+            width: 250px;
+            float: right;
+            height: 25px;
+
+        }
+
+        .w-244-HDBank {
+            margin: auto;
+            width: 244px;
+        }
+
+        .mt30 {
+            margin-top: 30px;
         }
     </style>
 </head>
 
 <body>
-    <div style="width:580px; margin: auto; background: white;">
-        <div style="width: 100%;">
-            <div style="width: 40%;  float: left;">
+    <div class="layout_HDBank">
+        <div>
+            <div class="logo_HDBank">
                 <div>
                     <img
                         src='data:image/png;base64,iVBORw0 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' />
                 </div>
             </div>
-            <div style="width:60%; float:right;  text-align: center; margin-top: 20px; ">
+            <div class="detail_HDBank">
                 <h2>CHI TIẾT GIAO DỊCH TÀI KHOẢN NGÂN HÀNG </h2>
-                <h5>Từ Ngày: <span>01/09/2022</span>  dến ngày : <span>13/09/2022</span> </h5>
+                <h5>Từ Ngày: <span>01/09/2022</span> dến ngày : <span>13/09/2022</span> </h5>
             </div>
             <div style="clear: both;"></div>
         </div>
-        <div style="width: 100%;margin-top: 20px;">
-            <table  style="width: 100%; background: #BEE0FC;">
+        <div class="row-HDBank">
+            <table class="table">
                 <tr>
-                    <th>KHÁCH  HÀNG  </th>
+                    <th>KHÁCH HÀNG </th>
                     <th> 0988765521</th>
                     <th> 09877521</th>
                     <th>NGUYEN VAN MANH</th>
                 </tr>
             </table>
-             <table  style="width:100% ; background:#BEE0FC ">
+            <table class="table">
                 <tr>
                     <th>Tài Khoản</th>
                     <th style="border-left: none;">098876521</th>
                     <th>0987632574892174891237</th>
                     <th>09876321417289472</th>
                 </tr>
-             </table> 
+            </table>
             <div>
-                <Table style="width: 100%;">
+                <table class="table">
                     <tr>
                         <th colspan="2">Chứng từ</th>
                         <th rowspan="2">Số ref</th>
@@ -103,137 +201,53 @@
                         <td>12/09/1997</td>
                         <td>222224532</td>
                         <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
+                        <td class="td-w-150">Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
                         <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
+                        <td class="td-w-100">4.451.000000</td>
+                        <td class="td-w-100">4.451.000000</td>
                     </tr>
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
-                    <tr>
-                        <td>12/09/1997</td>
-                        <td>222224532</td>
-                        <td>RB</td>
-                        <td style="text-align:left;width: 150px;" >Lương tháng 12 ahfasfjsahfjahfjkasfhsfsahjahsajkh</td>
-                        <td>SLRC</td>
-                        <td style="text-align: right;width: 100px;" >4.451.000000</td>
-                        <td style="text-align: right;width: 100px;">4.451.000000</td>
-                    </tr>
-                    
 
-                </Table>
+
+                </table>
             </div>
-            <div style="margin-top: 30px;">
-                <div style="width:250px; float: right; height: 25px;">
-                    <p style="font-weight: 500;font-size: 12px; float: left; text-align: left;text-transform: none;">Số
+            <div class="mt30">
+                <div class="w-250-HDBank">
+                    <p class="text-left-12-weight-500">Số
                         dư đầu :</p>
-                    <p style="font-weight: 500;font-size: 12px; text-align: right;">1,000,00</p>
+                    <p class="text-right-12-weight-500">1,000,00</p>
                 </div>
                 <div style="clear: both;"></div>
-                <div style="width:250px; float: right;height: 25px;">
-                    <p style="font-weight: 500;font-size: 12px; float: left; text-align: left;text-transform: none;">
+                <div class="w-250-HDBank">
+                    <p class="text-left-12-weight-500">
                         Phát sinh nợ:</p>
-                    <p style="font-weight: 500;font-size: 12px; text-align: right;">1,000,00</p>
+                    <p class="text-right-12-weight-500">1,000,00</p>
                 </div>
                 <div style="clear: both;"></div>
-                <div style="width:250px; float: right;height: 25px;">
-                    <p style="font-weight: 500;font-size: 12px; float: left; text-align: left;text-transform: none;">
+                <div class="w-250-HDBank">
+                    <p class="text-left-12-weight-500">
                         Phát sinh có:</p>
-                    <p style="font-weight: 500;font-size: 12px; text-align: right;">1,000000000000,00</p>
+                    <p class="text-right-12-weight-500">1,000000000000,00</p>
                 </div>
                 <div style="clear: both;"></div>
-                <div style="width:250px; float: right;height: 25px;">
-                    <p style="font-weight: 500;font-size: 12px; float: left; text-align: left;text-transform: none;">Số
+                <div class="w-250-HDBank">
+                    <p class="text-left-12-weight-500">Số
                         dư cuối</p>
-                    <p style="font-weight: 500;font-size: 12px; text-align: right;">1,000,00</p>
+                    <p class="text-right-12-weight-500">1,000,00</p>
                 </div>
-x
+
             </div>
-            <div style="margin-top: 30px;">
-                <div style="width:250px; float: right; height: 25px;">
-                    <div style="margin: auto; width: 244px;">
-                        <p style="font-weight: 500; font-size: 12px; text-align: left;text-transform: none; text-align: center;">Ngày
-                            <span>16 </span>Tháng <span>11</span> năm <span>2022</span></p>
-                        <h2 style="text-transform: uppercase;font-size: 12px; line-height: 0px; text-align: center;">Khối nhân sự HDBANK
+            <div class="mt30">
+                <div class="w-250-HDBank">
+                    <div class="w-244-HDBank">
+                        <p class="text-12">
+                            Ngày
+                            <span>16 </span>Tháng <span>11</span> năm <span>2022</span>
+                        </p>
+                        <h2 class="text-center-12-weight-500">
+                            Khối nhân sự HDBANK
                         </h2>
-                        <p style="font-weight: 500; font-size: 12px; text-align: left;text-transform: none; text-align: center;">(Chữ ký
+                        <p class="text-12">
+                            (Chữ ký
                             điện tử , chữ ký số)</p>
 
                     </div>
@@ -244,6 +258,7 @@ x
 
         </div>
     </div>
+
 </body>
 
 </html>
